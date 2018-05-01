@@ -1,10 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-class Textbox extends Component {
-  render() {
-    const { label, id, name, maxLength, placeholder, value, onChange } = this.props;
-
-    return (
+const Textbox = (props) => {
+  const { label, id, name, maxLength, placeholder, value, onChange } = props;
+  return (
       <label htmlFor={id}>
         {label}
         <input
@@ -18,7 +16,6 @@ class Textbox extends Component {
         />
       </label>
     );
-  }
 }
 
 export default Textbox;
